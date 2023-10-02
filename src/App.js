@@ -1,10 +1,14 @@
 import "./styles.scss";
+import Header from "./Components/Header";
+import Body from "./Components/Body";
+import Footer from "./Components/Footer";
 
 export default function App() {
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!!!</h2>
+      <Header />
+      <Body />
+      <Footer />
     </div>
   );
 }
