@@ -1,2 +1,2 @@
 # react-food-ordering-app
-Created with CodeSandbox
+ Food ordering app
