@@ -2,3 +2,25 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  img {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+  }
+
+  .nav-bar {
+    ul {
+      display: flex;
+      font-size: 24px;
+      li {
+        list-style-type: none;
+        padding: 10px;
+      }
+    }
+  }
+}
