@@ -59,7 +59,7 @@ export default function App() {
   return (
     <div className="App">
       <Header currentCity={currentCity} />
-      <Body />
+      <Body restaurantList={restaurantList} />
       <Footer />
     </div>
   );

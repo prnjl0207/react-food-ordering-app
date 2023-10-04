@@ -1,3 +1,9 @@
+@import "./Sass/fonts.scss";
+
+body {
+  margin: 0;
+}
+
 .App {
   font-family: sans-serif;
   text-align: center;
@@ -16,20 +22,74 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  img {
-    width: 100px;
-    height: 100px;
+
+  .logo-city {
+    display: flex;
+
+    img {
+      height: 200px;
+      width: 200px;
+    }
+
+    .city-name {
+      @extend %heading-delta;
+      padding: 25px 10px;
+    }
+  }
+  svg {
     padding: 10px;
   }
 
   .nav-bar {
     ul {
       display: flex;
-      font-size: 24px;
+      @extend %heading-delta;
       li {
         list-style-type: none;
         padding: 10px;
       }
+    }
+  }
+}
+
+.body-container {
+  background: lightgrey;
+}
+
+.res-container {
+  max-width: 1500px;
+  margin: 0 auto;
+
+  .input-container {
+    text-align: left;
+
+    button {
+      margin: 5px;
+    }
+  }
+
+  .res-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .res-card {
+    margin: 10px;
+    padding: 10px;
+
+    .image-wrapper {
+      height: 250px;
+      width: 250px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+      }
+    }
+
+    .text-wrapper {
+      text-align: left;
+      width: 95%;
     }
   }
 }
