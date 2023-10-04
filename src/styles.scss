@@ -118,4 +118,34 @@ body {
       }
     }
   }
+
+  .shimmer {
+    .restro-name {
+      background: #808080;
+      height: 20px;
+      width: 60px;
+      margin-bottom: 5px;
+    }
+
+    .restro-rating {
+      background: #808080;
+      height: 20px;
+      width: 40px;
+      margin-bottom: 5px;
+    }
+
+    .restro-cuisines {
+      background: #808080;
+      height: 20px;
+      width: 90px;
+      margin-bottom: 5px;
+    }
+
+    .restro-locality {
+      background: #808080;
+      height: 20px;
+      width: 50px;
+      margin-bottom: 5px;
+    }
+  }
 }

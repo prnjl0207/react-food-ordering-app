@@ -10,13 +10,15 @@ const Restaurant = (props) => {
         <button>Search top rated</button>
       </div>
       <div className="res-cards-container">
-        {restaurantList?.map((restro) => {
-          if (props?.restroList) {
+        {restaurantList?.length > 0 ? (
+          restaurantList.map((restro) => {
             return (
               <RestaurantCard key={restro.info.id} restroDetails={restro} />
             );
-          }
-        })}
+          })
+        ) : (
+          <Shimmer />
+        )}
       </div>
     </div>
   );
