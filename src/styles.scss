@@ -74,11 +74,13 @@ body {
   }
   .res-card {
     margin: 10px;
-    padding: 10px;
+    padding: 10px 20px;
+    height: 400px;
+    width: 300px;
 
     .image-wrapper {
-      height: 250px;
-      width: 250px;
+      height: 300px;
+      width: 300px;
 
       img {
         width: 100%;
@@ -90,6 +92,30 @@ body {
     .text-wrapper {
       text-align: left;
       width: 95%;
+      margin-top: 10px;
+
+      .restro-name {
+        @extend %heading-subhead;
+        margin-bottom: 5px;
+      }
+
+      .restro-rating {
+        @extend %baseline-body;
+        color: rgba(2, 6, 12, 0.6);
+        font-weight: 400;
+        margin-bottom: 5px;
+        display: flex;
+
+        span {
+          padding-left: 5px;
+        }
+      }
+
+      .restro-cuisines,
+      .restro-locality {
+        @extend %baseline-body;
+        margin-bottom: 5px;
+      }
     }
   }
 }
