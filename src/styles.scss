@@ -77,13 +77,13 @@ body {
   .res-cards-container {
     display: flex;
     flex-wrap: wrap;
-    cursor: pointer;
   }
   .res-card {
     margin: 10px;
     padding: 10px 20px;
     height: 430px;
     width: 300px;
+    cursor: pointer;
 
     .image-wrapper {
       height: 300px;
