@@ -85,6 +85,12 @@ body {
     width: 300px;
     cursor: pointer;
 
+    &:hover {
+      transform: scale(0.95, 0.95);
+      transform-origin: center center;
+      transition: all 0.1s ease-in 0s;
+    }
+
     .image-wrapper {
       height: 300px;
       width: 300px;
