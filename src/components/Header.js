@@ -1,16 +1,12 @@
 import { LOGO_URL } from "../utils/constants";
 import "../styles.scss";
 
-const Header = () => {
-  const currentCity = JSON.parse(localStorage.getItem("data"))
-    .data?.cards?.filter((res) => res?.card?.card?.id === "meta_data")
-    .map((res) => res?.card?.card?.citySlug)[0];
-  console.log("current", currentCity);
+const Header = (props) => {
   return (
     <div className="header-container">
       <div className="logo-city">
         <img src={LOGO_URL} alt="logo" />
-        <div className="city-name">Current City is : {currentCity}</div>
+        <div className="city-name">Current City is {props.currentCity}</div>
       </div>
 
       <div className="nav-bar">

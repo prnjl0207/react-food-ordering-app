@@ -8,6 +8,9 @@ import { useState, useEffect } from "react";
 export default function App() {
   const [userLat, setUserLat] = useState(0);
   const [userLong, setUserLong] = useState(0);
+  const [wholeData, setWholeData] = useState([]);
+  const [restaurantList, setRestaurantList] = useState([]);
+  const [currentCity, setCurrentCity] = useState("");
 
   useEffect(() => {
     userGeoLocation();
@@ -41,16 +44,21 @@ export default function App() {
         userLong +
         "&page_type=DESKTOP_WEB_LISTING",
     );
-    let restaurantList = await response.json();
-    localStorage.setItem("data", JSON.stringify(restaurantList));
-    const updatedRetList = restaurantList.data.cards
+    let actualData = await response.json();
+    setWholeData(actualData);
+    const updatedRestList = actualData.data.cards
       .filter((resp) => resp.card.card.id === "restaurant_grid_listing")
       .map((res) => res?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setRestaurantList(updatedRestList);
+    let currCity = actualData.data.cards
+      .filter((resp) => resp.card.card.id === "meta_data")
+      .map((res) => res.card.card.citySlug)[0];
+    setCurrentCity(currCity);
   };
 
   return (
     <div className="App">
-      <Header />
+      <Header currentCity={currentCity} />
       <Body />
       <Footer />
     </div>
