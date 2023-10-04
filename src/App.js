@@ -26,15 +26,14 @@ export default function App() {
   function success(data) {
     setUserLat(data.coords.latitude);
     setUserLong(data.coords.longitude);
-    console.log("before fetch fn", userLat);
     if (userLat && userLong) {
       fetchData();
     }
   }
 
   const fetchData = async () => {
-    console.log("inside fetch top", userLat);
-    const data = await fetch(
+    let newarr = [];
+    const response = await fetch(
       RESTAURANT_LISTING_URL +
         "lat=" +
         userLat +
@@ -42,14 +41,16 @@ export default function App() {
         userLong +
         "&page_type=DESKTOP_WEB_LISTING",
     );
-    const json = await data.json();
-    console.log("after fetch call", userLat);
-    console.log("data is ", json);
+    let restaurantList = await response.json();
+    localStorage.setItem("data", JSON.stringify(restaurantList));
+    const updatedRetList = restaurantList.data.cards
+      .filter((resp) => resp.card.card.id === "restaurant_grid_listing")
+      .map((res) => res?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   };
 
   return (
     <div className="App">
-      <Header userLat={userLat} userLong={userLong} />
+      <Header />
       <Body />
       <Footer />
     </div>
