@@ -27,7 +27,9 @@ export default function App() {
     setUserLat(data.coords.latitude);
     setUserLong(data.coords.longitude);
     console.log("before fetch fn", userLat);
-    fetchData();
+    if (userLat && userLong) {
+      fetchData();
+    }
   }
 
   const fetchData = async () => {
