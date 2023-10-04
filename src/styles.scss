@@ -1,6 +1,15 @@
 .App {
   font-family: sans-serif;
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .footer {
+    margin-top: auto;
+    background: #020b24;
+    color: #fff;
+  }
 }
 
 .header-container {

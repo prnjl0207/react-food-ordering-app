@@ -1,7 +1,7 @@
 import { LOGO_URL } from "../utils/constants";
 import "../styles.scss";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div className="header-container">
       <img src={LOGO_URL} alt="logo" />
