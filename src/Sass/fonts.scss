@@ -34,13 +34,13 @@ $font-size: 15;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.22;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: 0.06em;
 }
 
 %baseline-body {
   font-weight: 300;
-  font-size: 19px;
+  font-size: 16px;
   line-height: 1.4;
   letter-spacing: 0.02em;
 }

@@ -1,4 +1,5 @@
 import RestaurantCard from "./RestaurantCard";
+import Shimmer from "./Shimmer";
 
 const Restaurant = (props) => {
   let restaurantList = props.restroList;
