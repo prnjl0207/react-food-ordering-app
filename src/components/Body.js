@@ -1,9 +1,9 @@
 import Restaurant from "./Restaurant";
 
-const Body = () => {
+const Body = (props) => {
   return (
     <div className="body-container">
-      <Restaurant />
+      <Restaurant restroList={props.restaurantList[0]} />
     </div>
   );
 };

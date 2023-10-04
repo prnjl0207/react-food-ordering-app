@@ -1,10 +1,22 @@
 import RestaurantCard from "./RestaurantCard";
 
-const Restaurant = () => {
+const Restaurant = (props) => {
+  let restaurantList = props.restroList;
   return (
     <div className="res-container">
-      <input type="search" />
-      <RestaurantCard />
+      <div className="input-container">
+        <input type="search" />
+        <button>Search top rated</button>
+      </div>
+      <div className="res-cards-container">
+        {restaurantList?.map((restro) => {
+          if (props?.restroList) {
+            return (
+              <RestaurantCard key={restro.info.id} restroDetails={restro} />
+            );
+          }
+        })}
+      </div>
     </div>
   );
 };
