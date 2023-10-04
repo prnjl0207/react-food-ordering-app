@@ -63,9 +63,14 @@ body {
 
   .input-container {
     text-align: left;
+    margin: 5px 30px;
 
     button {
       margin: 5px;
+      border-radius: 5px;
+      border-color: antiquewhite;
+      background: burlywood;
+      text-transform: capitalize;
     }
   }
 

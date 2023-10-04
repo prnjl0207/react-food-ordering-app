@@ -7,7 +7,7 @@ const Restaurant = (props) => {
     <div className="res-container">
       <div className="input-container">
         <input type="search" />
-        <button>Search top rated</button>
+        <button>Search top rated restaurants</button>
       </div>
       <div className="res-cards-container">
         {restaurantList?.length > 0 ? (
