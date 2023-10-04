@@ -1,7 +1,10 @@
+import RestaurantCard from "./RestaurantCard";
+
 const Restaurant = () => {
   return (
     <div className="res-container">
-      <div></div>
+      <input type="search" />
+      <RestaurantCard />
     </div>
   );
 };
