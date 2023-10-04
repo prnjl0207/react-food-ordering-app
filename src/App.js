@@ -11,7 +11,7 @@ export default function App() {
 
   useEffect(() => {
     userGeoLocation();
-  }, [setUserLat, setUserLong]);
+  }, [userLat, userLong]);
 
   const userLocation = navigator.geolocation;
 
@@ -41,6 +41,7 @@ export default function App() {
         "&page_type=DESKTOP_WEB_LISTING",
     );
     const json = await data.json();
+    console.log("after fetch call", userLat);
     console.log("data is ", json);
   };
 
