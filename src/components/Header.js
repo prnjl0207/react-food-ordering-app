@@ -38,7 +38,7 @@ const Header = (props) => {
         <ul>
           <li>Home</li>
           <li>About</li>
-          <li>Contact Us</li>
+          <li>Cart</li>
         </ul>
       </div>
     </div>
