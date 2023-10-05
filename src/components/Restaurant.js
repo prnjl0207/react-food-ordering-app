@@ -2,7 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 
 const Restaurant = (props) => {
-  let restaurantList = props.restroList;
+  let restaurantList = props?.restroList;
   return (
     <div className="res-container">
       <div className="input-container">
