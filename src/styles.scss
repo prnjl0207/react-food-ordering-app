@@ -168,3 +168,21 @@ body {
     }
   }
 }
+
+.shimmer-effect {
+  color: grey;
+  display: inline-block;
+  /* adding gradients */
+  -webkit-mask: linear-gradient(90deg, #000 25%, #0005, #000 75%) right/250%
+    100%;
+  /* shimmer effect animation */
+  animation: shimmer 2.5s infinite;
+  background-repeat: no-repeat;
+  width: 500px;
+}
+@keyframes shimmer {
+  100% {
+    /* setting up mask position at left side */
+    -webkit-mask-position: left;
+  }
+}
