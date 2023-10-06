@@ -1,7 +1,7 @@
 const Shimmer = () => {
   const count = 8;
   return (
-    <div className="res-card shimmer">
+    <div className="res-card shimmer shimmer-effect">
       <div className="image-wrapper">
         <img src="https://htmlcolorcodes.com/assets/images/colors/gray-color-solid-background-1920x1080.png" />
       </div>
