@@ -17,7 +17,16 @@ const Restaurant = (props) => {
             );
           })
         ) : (
-          <Shimmer />
+          <>
+            <Shimmer />
+            <Shimmer />
+            <Shimmer />
+            <Shimmer />
+            <Shimmer />
+            <Shimmer />
+            <Shimmer />
+            <Shimmer />
+          </>
         )}
       </div>
     </div>
