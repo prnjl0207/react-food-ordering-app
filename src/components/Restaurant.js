@@ -6,7 +6,7 @@ const Restaurant = (props) => {
   return (
     <div className="res-container">
       <div className="input-container">
-        <input type="search" />
+        <input type="search" aria-labelledby="search" />
         <button>Search top rated restaurants</button>
       </div>
       <div className="res-cards-container">
