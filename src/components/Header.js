@@ -1,6 +1,21 @@
 import "../styles.scss";
+import { Link } from "react-router-dom";
+import useRestaurantData from "../utils/useRestaurantData";
+import { useState, useEffect } from "react";
 
 const Header = (props) => {
+  const [currentCity, setCurrentCity] = useState("");
+  const restaurantData = useRestaurantData();
+
+  useEffect(() => {
+    if (restaurantData) {
+      let currCity = restaurantData?.cards
+        ?.filter((resp) => resp.card.card.id === "meta_data")
+        .map((res) => res.card.card.citySlug)[0];
+      setCurrentCity(currCity);
+    }
+  }, [restaurantData]);
+
   return (
     <div className="header-container">
       <div className="logo-city">
@@ -31,14 +46,14 @@ const Header = (props) => {
             </linearGradient>
           </defs>
         </svg>
-        <div className="city-name">{props.currentCity}</div>
+        <div className="city-name">{currentCity}</div>
       </div>
 
       <div className="nav-bar">
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Cart</li>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link>Cart</Link>
         </ul>
       </div>
     </div>

@@ -46,9 +46,12 @@ body {
     ul {
       display: flex;
       @extend %heading-delta;
-      li {
+      li,
+      a {
         list-style-type: none;
         padding: 25px;
+        text-decoration: none;
+        color: #000;
       }
     }
   }
@@ -59,14 +62,16 @@ body {
 }
 
 .res-container {
-  max-width: 1500px;
-  margin: 0 auto;
+  background: lightgrey;
 
   .input-container {
-    text-align: left;
-    margin: 5px 30px;
-    border-radius: 5px;
-    border: none;
+    padding-top: 15px;
+
+    input {
+      border-radius: 5px;
+      border: 1px solid lightgray;
+      padding: 5px;
+    }
 
     button {
       margin: 5px;
@@ -75,12 +80,15 @@ body {
       background: burlywood;
       text-transform: capitalize;
       cursor: pointer;
+      padding: 5px;
     }
   }
 
   .res-cards-container {
     display: flex;
     flex-wrap: wrap;
+    max-width: 1500px;
+    margin: 0 auto;
   }
   .res-card {
     margin: 10px;

@@ -1,8 +1,21 @@
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
+import useRestaurantData from "../utils/useRestaurantData";
+import { useState, useEffect } from "react";
 
-const Restaurant = (props) => {
-  let restaurantList = props?.restroList;
+const Restaurant = () => {
+  const [restaurantList, setRestaurantList] = useState([]);
+  const restaurantData = useRestaurantData();
+
+  useEffect(() => {
+    if (restaurantData) {
+      let filteredRestroList = restaurantData?.cards
+        ?.filter((resp) => resp.card.card.id === "restaurant_grid_listing")[0]
+        .card?.card?.gridElements?.infoWithStyle?.restaurants.map((res) => res);
+      setRestaurantList(filteredRestroList);
+    }
+  }, [restaurantData]);
+
   return (
     <div className="res-container">
       <div className="input-container">
