@@ -1,9 +1,13 @@
 import { RESTRO_IMG_URL } from "../utils/constants";
+import { useNavigate } from "react-router-dom";
 
 const RestaurantCard = (props) => {
+  const navigate = useNavigate();
+  const handleClick = () =>
+    navigate("/restaurant/" + props.restroDetails.info.id);
   return (
     <div className="res-card">
-      <div className="image-wrapper">
+      <div className="image-wrapper" onClick={handleClick}>
         <img
           src={RESTRO_IMG_URL + props.restroDetails.info.cloudinaryImageId}
           alt="restaurant image"
