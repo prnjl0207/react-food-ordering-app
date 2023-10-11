@@ -46,12 +46,14 @@ body {
     ul {
       display: flex;
       @extend %heading-delta;
-      li,
-      a {
+      li {
         list-style-type: none;
         padding: 25px;
-        text-decoration: none;
-        color: #000;
+
+        a {
+          text-decoration: none;
+          color: #000;
+        }
       }
     }
   }
