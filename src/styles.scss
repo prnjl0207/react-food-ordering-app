@@ -1,5 +1,9 @@
 @import "./Sass/fonts.scss";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
 }
@@ -35,11 +39,11 @@ body {
     .city-name {
       @extend %heading-subhead;
 
-      padding: 25px 10px;
+      padding: 18px 10px;
     }
   }
   svg {
-    padding: 10px;
+    padding: 5px;
   }
 
   .nav-bar {
