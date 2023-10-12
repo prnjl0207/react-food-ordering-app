@@ -26,7 +26,23 @@ const ResCategory = ({ listData }) => {
             <div className="font-bold text-center">
               {res?.card?.card?.title} ({res?.card?.card?.itemCards.length})
             </div>
-            <div>⬇️</div>
+            {res.isShow === true ? (
+              <div>
+                <img
+                  className="w-6"
+                  src="https://cdn0.iconfinder.com/data/icons/mobile-basic-vol-1/32/Chevron_Up-1024.png"
+                  alt="chevron up image"
+                />
+              </div>
+            ) : (
+              <div>
+                <img
+                  className="w-6"
+                  src="https://cdn3.iconfinder.com/data/icons/user-interface-169/32/chevron-bottom-1024.png"
+                  alt="chevron down image"
+                />
+              </div>
+            )}
           </div>
           {res?.isShow && <ListItems items={res?.card?.card?.itemCards} />}
         </div>
