@@ -28,6 +28,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   padding: 0 20px;
+  box-shadow: 0 15px 40px -20px rgba(40, 44, 63, 0.15);
 
   .logo-city {
     display: flex;
@@ -64,13 +65,7 @@ body {
   }
 }
 
-.body-container {
-  background: lightgrey;
-}
-
 .res-container {
-  background: lightgrey;
-
   .input-container {
     padding-top: 15px;
 
@@ -95,11 +90,11 @@ body {
   .res-cards-container {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1500px;
+    // max-width: 1500px;
     margin: 0 auto;
   }
   .res-card {
-    margin: 10px;
+    margin: 25px;
     padding: 10px 20px;
     height: 430px;
     width: 300px;
@@ -206,4 +201,8 @@ body {
     /* setting up mask position at left side */
     -webkit-mask-position: left;
   }
+}
+
+.addItem {
+  box-shadow: 0 3px 8px #e9e9eb;
 }
