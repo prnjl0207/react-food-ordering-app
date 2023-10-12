@@ -36,7 +36,6 @@ const RestaurantMenu = () => {
         },
       );
     setListData(filterListData);
-    console.log("data", filterListData);
   };
   return (
     <div className="text-center py-8">

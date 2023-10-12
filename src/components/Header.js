@@ -18,7 +18,7 @@ const Header = (props) => {
 
   return (
     <div className="header-container">
-      <div className="logo-city">
+      <div className="logo-city pl-5">
         <svg
           className="_8pSp-"
           viewBox="0 0 559 825"
