@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import useRestaurantData from "../utils/useRestaurantData";
 import { useState, useEffect } from "react";
 
-const Header = (props) => {
+const Header = () => {
   const [currentCity, setCurrentCity] = useState("");
   const restaurantData = useRestaurantData();
   const navigate = useNavigate();
