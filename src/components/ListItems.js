@@ -10,7 +10,20 @@ const ListItems = ({ items }) => {
             className="text-left flex justify-between items-center border-gray-400 border-b-2 py-6 last:border-b-0"
           >
             <div>
-              {item?.card?.info?.name}
+              {item?.card?.info?.isVeg ? (
+                <img
+                  className="w-4 pb-2"
+                  src="https://openclipart.org/image/800px/304248"
+                  alt="veg icon image"
+                />
+              ) : (
+                <img
+                  className="w-4 pb-2"
+                  src="https://pbs.twimg.com/media/FS8Q1ZZaIAAfDvc?format=jpg&name=360x360"
+                  alt="veg icon image"
+                />
+              )}
+              <div>{item?.card?.info?.name}</div>
               <div>
                 ₹
                 {item?.card?.info?.price / 100 ||
