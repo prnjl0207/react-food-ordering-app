@@ -18,14 +18,14 @@ const Restaurant = () => {
 
   return (
     <div className="res-container">
-      <div className="input-container">
+      {/* <div className="input-container">
         <input
           type="search"
           aria-labelledby="search"
           placeholder="Enter restaurant name"
         />
         <button>Search top rated restaurants</button>
-      </div>
+      </div> */}
       <div className="res-cards-container">
         {restaurantList?.length > 0 ? (
           restaurantList.map((restro) => {
