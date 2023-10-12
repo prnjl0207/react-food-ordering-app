@@ -1,6 +1,7 @@
 import { RESTRO_IMG_URL } from "../utils/constants";
 
 const ListItems = ({ items }) => {
+  console.log(items);
   return (
     <div>
       {items.map((item) => {
@@ -11,7 +12,11 @@ const ListItems = ({ items }) => {
           >
             <div>
               {item?.card?.info?.name}
-              <div>{item?.card?.info?.price / 100}</div>
+              <div>
+                ₹
+                {item?.card?.info?.price / 100 ||
+                  item?.card?.info?.defaultPrice / 100}
+              </div>
             </div>
             <div className="w-[118px] h-[96px] relative">
               {item?.card?.info?.imageId && (
