@@ -26,7 +26,7 @@ const Restaurant = () => {
         />
         <button>Search top rated restaurants</button>
       </div> */}
-      <div className="res-cards-container">
+      <div className="res-cards-container w-10/12 mx-auto">
         {restaurantList?.length > 0 ? (
           restaurantList.map((restro) => {
             return (
