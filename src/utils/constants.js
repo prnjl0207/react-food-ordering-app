@@ -7,4 +7,12 @@ const LOGO_URL =
 const RESTRO_IMG_URL =
   "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
-export { LOGO_URL, RESTAURANT_LISTING_URL, RESTRO_IMG_URL };
+const RESTAURANT_DETAILS_API =
+  "https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&";
+
+export {
+  LOGO_URL,
+  RESTAURANT_LISTING_URL,
+  RESTRO_IMG_URL,
+  RESTAURANT_DETAILS_API,
+};
