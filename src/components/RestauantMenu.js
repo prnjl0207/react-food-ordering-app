@@ -9,13 +9,11 @@ const RestaurantMenu = () => {
   const { long, lat } = useContext(UserCoordinates);
   const [resInfo, setresInfo] = useState(null);
   const [listData, setListData] = useState(null);
-  const [showIndex, setShowIndex] = useState(null);
 
   let filterListData = [];
   useEffect(() => {
     fetchRestMenu();
   }, []);
-
   const fetchRestMenu = async () => {
     const data = await fetch(
       RESTAURANT_DETAILS_API +
@@ -154,11 +152,7 @@ const RestaurantMenu = () => {
         </div>
       </div>
 
-      <ResCategory
-        listData={listData}
-        // showItems={index === showIndex ? true : false}
-        // setShowIndex={() => setShowIndex(index)}
-      />
+      {listData && <ResCategory listData={listData} />}
     </div>
   );
 };
