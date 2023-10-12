@@ -29,6 +29,9 @@ const ListItems = ({ items }) => {
                 {item?.card?.info?.price / 100 ||
                   item?.card?.info?.defaultPrice / 100}
               </div>
+              <div className="text-sm text-slate-500 pr-[5%] pt-[1%]">
+                {item?.card?.info?.description}
+              </div>
             </div>
             <div className="w-[118px] h-[96px] relative">
               {item?.card?.info?.imageId && (
