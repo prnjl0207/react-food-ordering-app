@@ -2,19 +2,31 @@ import ListItems from "./ListItems";
 import { useState } from "react";
 
 const ResCategory = ({ listData }) => {
-  const [showList, setShowList] = useState(false);
+  const [showList, setShowList] = useState(listData);
+  const clickHandler = (index) => {
+    const resCatFilteredListItems = listData.map((elem, i) => {
+      if (i === index) {
+        elem.isShow = !elem?.isShow;
+      }
+      return elem;
+    });
+    setShowList(resCatFilteredListItems);
+  };
+  console.log("dataaaaa", showList);
   return (
     <div>
-      {listData?.map((res) => (
+      {showList?.map((res, index) => (
         <div key={res?.card?.card?.title} className=" w-6/12 mx-auto">
-          <div className="flex justify-between pt-4">
+          <div
+            className="flex justify-between pt-4"
+            onClick={() => clickHandler(index)}
+          >
             <div className="font-bold text-center">
               {res?.card?.card?.title} ({res?.card?.card?.itemCards.length})
             </div>
             <div>⬇️</div>
           </div>
-          {/* {showItems && <ListItems items={res?.card?.card?.itemCards} />} */}
-          <ListItems items={res?.card?.card?.itemCards} />
+          {res?.isShow && <ListItems items={res?.card?.card?.itemCards} />}
         </div>
       ))}
     </div>

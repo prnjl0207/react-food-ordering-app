@@ -1,9 +1,9 @@
 import { RESTRO_IMG_URL } from "../utils/constants";
 
-const ListItems = ({ items, showList }) => {
+const ListItems = ({ items }) => {
   return (
     <div>
-      {items.map((item) => {
+      {items.map((item, index) => {
         return (
           <div
             key={item?.card?.info?.id}
