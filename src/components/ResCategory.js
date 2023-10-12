@@ -15,7 +15,10 @@ const ResCategory = ({ listData }) => {
   return (
     <div>
       {showList?.map((res, index) => (
-        <div key={res?.card?.card?.title} className=" w-6/12 mx-auto">
+        <div
+          key={res?.card?.card?.title}
+          className=" w-6/12 mx-auto border-b-[16px] border-gray-300 pb-6"
+        >
           <div
             className="flex justify-between pt-4 cursor-pointer"
             onClick={() => clickHandler(index)}

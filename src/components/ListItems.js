@@ -3,11 +3,11 @@ import { RESTRO_IMG_URL } from "../utils/constants";
 const ListItems = ({ items }) => {
   return (
     <div>
-      {items.map((item, index) => {
+      {items.map((item) => {
         return (
           <div
             key={item?.card?.info?.id}
-            className="text-left flex justify-between items-center border-gray-400 border-b-2 py-6"
+            className="text-left flex justify-between items-center border-gray-400 border-b-2 py-6 last:border-b-0"
           >
             <div>
               {item?.card?.info?.name}
