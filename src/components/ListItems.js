@@ -1,7 +1,6 @@
 import { RESTRO_IMG_URL } from "../utils/constants";
 
 const ListItems = ({ items }) => {
-  console.log(items);
   return (
     <div>
       {items.map((item) => {
