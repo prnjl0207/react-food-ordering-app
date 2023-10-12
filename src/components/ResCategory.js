@@ -12,13 +12,12 @@ const ResCategory = ({ listData }) => {
     });
     setShowList(resCatFilteredListItems);
   };
-  console.log("dataaaaa", showList);
   return (
     <div>
       {showList?.map((res, index) => (
         <div key={res?.card?.card?.title} className=" w-6/12 mx-auto">
           <div
-            className="flex justify-between pt-4"
+            className="flex justify-between pt-4 cursor-pointer"
             onClick={() => clickHandler(index)}
           >
             <div className="font-bold text-center">
