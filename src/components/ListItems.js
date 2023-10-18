@@ -1,6 +1,13 @@
+import { useDispatch, useSelector } from "react-redux";
 import { RESTRO_IMG_URL } from "../utils/constants";
+import cartSlice, { addItem } from "../Redux/cartSlice";
 
 const ListItems = ({ items }) => {
+  const dispatch = useDispatch();
+  const handleAddItem = (item) => {
+    dispatch(addItem(item));
+  };
+
   return (
     <div>
       {items.map((item) => {
@@ -41,8 +48,11 @@ const ListItems = ({ items }) => {
                   alt="restaurant image"
                 />
               )}
-              <button className="addItem absolute border-gray-300 bg-white rounded-lg text-green-600 w-14 top-[88%] left-[25%]">
-                Add
+              <button
+                className="addItem absolute border-gray-300 bg-white rounded-lg text-green-600 w-14 top-[88%] left-[25%]"
+                onClick={() => handleAddItem(item)}
+              >
+                Add +
               </button>
             </div>
           </div>
