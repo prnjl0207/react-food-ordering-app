@@ -2,6 +2,8 @@ import "./styles.scss";
 import { useState, useEffect, useContext } from "react";
 import UserCoordinates from "./utils/UserCoordinates";
 import Applayout from "./components/Applayout";
+import { Provider } from "react-redux";
+import appStore from "./Redux/appStore";
 
 export default function App() {
   const [userLat, setUserLat] = useState(0);
@@ -30,9 +32,11 @@ export default function App() {
 
   return (
     <>
-      <UserCoordinates.Provider value={{ long: userLong, lat: userLat }}>
-        <Applayout />
-      </UserCoordinates.Provider>
+      <Provider store={appStore}>
+        <UserCoordinates.Provider value={{ long: userLong, lat: userLat }}>
+          <Applayout />
+        </UserCoordinates.Provider>
+      </Provider>
     </>
   );
 }

@@ -3,11 +3,14 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import useRestaurantData from "../utils/useRestaurantData";
 import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [currentCity, setCurrentCity] = useState("");
   const restaurantData = useRestaurantData();
   const navigate = useNavigate();
+
+  const cartItems = useSelector((store) => store.cart.items);
 
   const handleClick = () => {
     navigate("/");
@@ -61,13 +64,25 @@ const Header = () => {
       <div className="nav-bar">
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link className="flex items-center" to="/about">
+              <img
+                src="https://cdn-icons-png.flaticon.com/256/6587/6587485.png"
+                className="w-[50px] pr-2"
+              />
+              About
+            </Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link>Cart</Link>
+            <Link className="flex items-center relative" to="/cart">
+              <img
+                className="w-[50px] pr-2"
+                src="https://cdn-icons-png.flaticon.com/512/600/600173.png"
+              />
+              <span className="text-xl text-orange-950 absolute right-0 item-num">
+                {cartItems.length}
+              </span>
+              <span className="pl-2">Cart</span>
+            </Link>
           </li>
         </ul>
       </div>
