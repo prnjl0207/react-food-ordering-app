@@ -13,6 +13,7 @@ const ListItems = ({ items }) => {
       {items.map((item) => {
         return (
           <div
+            data-testid="items"
             key={item?.card?.info?.id}
             className="text-left flex justify-between items-center border-gray-400 border-b-2 py-6 last:border-b-0"
           >

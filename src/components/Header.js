@@ -1,4 +1,3 @@
-import "../styles.scss";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import useRestaurantData from "../utils/useRestaurantData";
@@ -28,9 +27,13 @@ const Header = () => {
   return (
     <div className="header-container">
       <div className="logo-city pl-5">
-        <div className="cursor-pointer" onClick={handleClick}>
+        <div
+          className="cursor-pointer"
+          data-testid="logo"
+          onClick={handleClick}
+        >
           <svg
-            className="_8pSp-"
+            className="_8pSp- "
             viewBox="0 0 559 825"
             height="49"
             width="34"
@@ -58,7 +61,9 @@ const Header = () => {
           </svg>
         </div>
 
-        <div className="city-name">{currentCity}</div>
+        <div className="city-name" data-testid="cityName">
+          {currentCity}
+        </div>
       </div>
 
       <div className="nav-bar">

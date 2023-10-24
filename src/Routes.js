@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import App from "./App";
 import Restaurant from "./components/Restaurant";
-import RestaurantMenu from "./components/RestauantMenu";
+import RestaurantMenu from "./components/RestaurantMenu";
 import Cart from "./components/Cart";
 
 const About = lazy(() => import("./components/About"));
