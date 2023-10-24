@@ -22,7 +22,7 @@ const RestaurantMenu = () => {
         "&lng=" +
         long +
         "&restaurantId=" +
-        resId.id,
+        resId.id
     );
     const response = await data.json();
     setresInfo(response);
@@ -33,7 +33,7 @@ const RestaurantMenu = () => {
             card.card.card["@type"] ===
             "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
           );
-        },
+        }
       );
     setListData(filterListData);
   };

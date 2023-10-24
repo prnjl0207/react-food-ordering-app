@@ -4,17 +4,21 @@ import { useNavigate } from "react-router-dom";
 const RestaurantCard = (props) => {
   const navigate = useNavigate();
   const handleClick = () =>
-    navigate("/restaurant/" + props.restroDetails.info.id);
+    navigate("/restaurant/" + props?.restroDetails?.info?.id);
   return (
     <div className="res-card">
-      <div className="image-wrapper" onClick={handleClick}>
+      <div
+        className="image-wrapper"
+        data-testid="imageWrapper"
+        onClick={handleClick}
+      >
         <img
-          src={RESTRO_IMG_URL + props.restroDetails.info.cloudinaryImageId}
+          src={RESTRO_IMG_URL + props?.restroDetails?.info?.cloudinaryImageId}
           alt="restaurant image"
         />
       </div>
       <div className="text-wrapper">
-        <div className="restro-name">{props.restroDetails.info.name}</div>
+        <div className="restro-name">{props?.restroDetails?.info?.name}</div>
         <div className="restro-rating">
           <svg
             width="20"
@@ -50,18 +54,18 @@ const RestaurantCard = (props) => {
               </linearGradient>
             </defs>
           </svg>
-          <span>{props.restroDetails.info.avgRating}</span>
+          <span>{props?.restroDetails?.info?.avgRating}</span>
         </div>
         <div
           className="
           restro-cuisines"
         >
-          {props.restroDetails.info.cuisines
+          {props?.restroDetails?.info?.cuisines
             .map((cuisines) => cuisines)
             .join(",")}
         </div>
         <div className="restro-locality">
-          {props.restroDetails.info.locality}
+          {props?.restroDetails?.info?.locality}
         </div>
       </div>
     </div>
