@@ -72,6 +72,7 @@ const Header = () => {
             <Link className="flex items-center" to="/about">
               <img
                 src="https://cdn-icons-png.flaticon.com/256/6587/6587485.png"
+                alt="about icon"
                 className="w-[50px] pr-2"
               />
               About
@@ -81,6 +82,7 @@ const Header = () => {
             <Link className="flex items-center relative" to="/cart">
               <img
                 className="w-[50px] pr-2"
+                alt="cart icon"
                 src="https://cdn-icons-png.flaticon.com/512/600/600173.png"
               />
               <span className="text-xl text-orange-950 absolute right-0 item-num">
