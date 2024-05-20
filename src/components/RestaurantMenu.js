@@ -25,7 +25,6 @@ const RestaurantMenu = () => {
         resId.id,
     );
     const response = await data.json();
-    console.log("restro menus", response);
     setresInfo(response);
     let restroMenuCards = response?.data?.cards?.filter(
       (res) => res?.groupedCard,
@@ -47,13 +46,13 @@ const RestaurantMenu = () => {
       <div className="flex justify-between w-6/12 mx-auto text-left">
         <div>
           <div className="font-bold">
-            {resInfo?.data?.cards[0]?.card?.card?.info?.name}
+            {resInfo?.data?.cards[2]?.card?.card?.info?.name}
           </div>
           <div className="text-base text-gray-500">
-            {resInfo?.data?.cards[0]?.card?.card?.info?.cuisines.join(", ")}
+            {resInfo?.data?.cards[2]?.card?.card?.info?.cuisines.join(", ")}
           </div>
           <div className="text-base text-gray-500">
-            {resInfo?.data?.cards[0]?.card?.card?.info?.locality}
+            {resInfo?.data?.cards[2]?.card?.card?.info?.locality}
           </div>
         </div>
 
