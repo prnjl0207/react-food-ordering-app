@@ -95,11 +95,11 @@ const RestaurantMenu = () => {
             </svg>
 
             <span className="pl-2">
-              {resInfo?.data?.cards[0]?.card?.card?.info?.avgRating}
+              {resInfo?.data?.cards[2]?.card?.card?.info?.avgRating}
             </span>
           </div>
           <div className="pt-1">
-            {resInfo?.data?.cards[0]?.card?.card?.info?.totalRatingsString}
+            {resInfo?.data?.cards[2]?.card?.card?.info?.totalRatingsString}
           </div>
         </div>
       </div>
@@ -126,7 +126,7 @@ const RestaurantMenu = () => {
             ></path>
           </svg>
           <span className="pl-2">
-            {resInfo?.data?.cards[0]?.card?.card?.info?.sla?.deliveryTime} MINS
+            {resInfo?.data?.cards[2]?.card?.card?.info?.sla?.deliveryTime} MINS
           </span>
         </div>
         <div className="flex items-center pl-4">
@@ -151,7 +151,7 @@ const RestaurantMenu = () => {
             ></path>
           </svg>
           <span className="pl-2">
-            {resInfo?.data?.cards[0]?.card?.card?.info?.costForTwoMessage}
+            {resInfo?.data?.cards[2]?.card?.card?.info?.costForTwoMessage}
           </span>
         </div>
       </div>
