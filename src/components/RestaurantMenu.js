@@ -22,18 +22,23 @@ const RestaurantMenu = () => {
         "&lng=" +
         long +
         "&restaurantId=" +
-        resId.id
+        resId.id,
     );
     const response = await data.json();
+    console.log("restro menus", response);
     setresInfo(response);
+    let restroMenuCards = response?.data?.cards?.filter(
+      (res) => res?.groupedCard,
+    );
+
     let filterListData =
-      response?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.filter(
+      restroMenuCards[0].groupedCard.cardGroupMap?.REGULAR?.cards?.filter(
         (card) => {
           return (
             card.card.card["@type"] ===
             "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
           );
-        }
+        },
       );
     setListData(filterListData);
   };
