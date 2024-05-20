@@ -25,7 +25,6 @@ const RestaurantMenu = () => {
         resId.id,
     );
     const response = await data.json();
-    console.log("restro menus", response);
     setresInfo(response);
     let restroMenuCards = response?.data?.cards?.filter(
       (res) => res?.groupedCard,
@@ -47,13 +46,13 @@ const RestaurantMenu = () => {
       <div className="flex justify-between w-6/12 mx-auto text-left">
         <div>
           <div className="font-bold">
-            {resInfo?.data?.cards[0]?.card?.card?.info?.name}
+            {resInfo?.data?.cards[2]?.card?.card?.info?.name}
           </div>
           <div className="text-base text-gray-500">
-            {resInfo?.data?.cards[0]?.card?.card?.info?.cuisines.join(", ")}
+            {resInfo?.data?.cards[2]?.card?.card?.info?.cuisines.join(", ")}
           </div>
           <div className="text-base text-gray-500">
-            {resInfo?.data?.cards[0]?.card?.card?.info?.locality}
+            {resInfo?.data?.cards[2]?.card?.card?.info?.locality}
           </div>
         </div>
 
@@ -95,11 +94,11 @@ const RestaurantMenu = () => {
             </svg>
 
             <span className="pl-2">
-              {resInfo?.data?.cards[0]?.card?.card?.info?.avgRating}
+              {resInfo?.data?.cards[2]?.card?.card?.info?.avgRating}
             </span>
           </div>
           <div className="pt-1">
-            {resInfo?.data?.cards[0]?.card?.card?.info?.totalRatingsString}
+            {resInfo?.data?.cards[2]?.card?.card?.info?.totalRatingsString}
           </div>
         </div>
       </div>
@@ -126,7 +125,7 @@ const RestaurantMenu = () => {
             ></path>
           </svg>
           <span className="pl-2">
-            {resInfo?.data?.cards[0]?.card?.card?.info?.sla?.deliveryTime} MINS
+            {resInfo?.data?.cards[2]?.card?.card?.info?.sla?.deliveryTime} MINS
           </span>
         </div>
         <div className="flex items-center pl-4">
@@ -151,7 +150,7 @@ const RestaurantMenu = () => {
             ></path>
           </svg>
           <span className="pl-2">
-            {resInfo?.data?.cards[0]?.card?.card?.info?.costForTwoMessage}
+            {resInfo?.data?.cards[2]?.card?.card?.info?.costForTwoMessage}
           </span>
         </div>
       </div>
